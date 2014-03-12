@@ -1,0 +1,30 @@
+<h2>Create Employee</h2>
+
+
+<%= form_tag(method: "post") do %>
+	<table>
+		<tr>
+			<td><%= label_tag("Name") %> </td>
+	  		<td><%= text_field_tag("name") %></td>
+	  	</tr>
+	  	<tr>
+	  		<td><%= label_tag("Address: ") %> </td>
+	  		<td><%= text_area_tag("address") %></td>
+	  	</tr>
+	  	<tr>
+	  		<td><%= label_tag("city") %></td>
+	  		<td><%= select_tag(:city, options_for_select([['Select', 0], ['Faridabad', 1],['Delhi', 2], ['Noida', 3], ['Gurgaon', 4]])) %></td>
+	  	</tr>
+	  	<tr>
+			<td><%= label_tag("Gender") %></td>
+	 		<td><%= radio_button_tag(:gender, "Male") %> <%= label_tag("Male") %> <%= radio_button_tag(:gender, "Female") %> <%= label_tag("Female") %></td>
+	 	<tr>
+	 		<td><%= label_tag("Date Of Birth") %></td>
+	 		<td><%= text_field_tag("dob") %></td>
+	 	</tr>
+	 </table>
+	 	<p><%= check_box_tag("accept") %> <%= label_tag("Accept terms & condition")%></p>
+	 	<p><%= submit_tag("Save") %></p>
+
+	 	 	
+<% end %>

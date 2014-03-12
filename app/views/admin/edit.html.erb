@@ -1,0 +1,26 @@
+<h2>Edit Employee Information</h2>
+
+<%= form_for @user, :url => { :action => "update" } do |f| %>
+	<table>
+		<tr>
+			<td><%= f.label :Name %> </td>
+	  		<td><%= f.text_field :name %></td>
+	  	</tr>
+	  	<tr>
+	  		<td><%= f.label :Address %> </td>
+	  		<td><%= f.text_area :address %></td>
+	  	</tr>
+	  	
+	  	<tr>
+			<td><%= f.label :Gender %></td>
+	 		<td><%= f.radio_button(:gender, "Male") %> <%= f.label :Male %> <%= f.radio_button(:gender, "Female") %> <%= f.label :Female %></td>
+	 	</tr>
+	 	<tr>
+	 		<td><%= f.label :Date_Of_Birth %></td>
+	 		<td><%= f.text_field :dob %></td>
+	 	</tr>
+	 </table>
+	 	<p><%= f.submit %></p>
+
+
+<% end %>

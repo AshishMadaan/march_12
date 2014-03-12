@@ -1,0 +1,23 @@
+<h2>Enter Employee Infromation</h2>
+
+<%= label_tag("Name") %> 
+  <%= text_field_tag("name") %><br>
+
+<%= label_tag("Address") %> 
+  <%= text_area_tag("address") %><br>
+
+<%= label_tag("Gender") %> 
+  <%= radio_button_tag(:gender, "Male") %>
+    <%= label_tag("Male") %>
+  <%= radio_button_tag(:gender, "Female") %>
+    <%= label_tag("Male") %><br>
+
+<%= label_tag("Date Of Birth") %>
+ <%= text_field_tag("dob") %><br>
+
+<%= check_box_tag("accept") %>
+<%= label_tag("Accept terms & condition")%><br>
+
+<%= submit_tag("Save") %>
+
+<%= date_field(:date, "employee") %>
